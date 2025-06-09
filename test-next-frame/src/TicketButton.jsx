@@ -1,5 +1,5 @@
-
 import React, { useEffect, useState } from 'react';
+import './Button.css';
 
 function TicketButton() {
     const [seconds, setSeconds] = useState(10);
@@ -15,13 +15,13 @@ function TicketButton() {
             setSeconds(prev => prev - 1);
         }, 1000);
 
-        return () => clearInterval(timer); // 정리
+        return () => clearInterval(timer);
     }, [seconds]);
 
     return (
-        <div style={{ marginTop: '50px', textAlign: 'center' }}>
-            <button disabled={!available} style={{ fontSize: '20px', padding: '10px 20px' }}>
-                {available ? '예매하기' : `${seconds}초 후 활성화`}
+        <div className="page-center">
+            <button className="ticket-button" disabled={!available}>
+                {available ? '예매하기' : `${seconds}초 후 일반예매 시작`}
             </button>
         </div>
     );

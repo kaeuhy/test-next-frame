@@ -1,0 +1,26 @@
+/* 전체 화면 가운데 정렬 */
+.page-center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 버튼 스타일 */
+.ticket-button {
+    background-color: #3b5bfe;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ticket-button:disabled {
+    background-color: #a5a5a5;
+    cursor: not-allowed;
+}
